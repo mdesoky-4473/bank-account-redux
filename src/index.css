@@ -1,28 +1,46 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
+  --background-color: #f4f4f4; /* Light gray background */
+ 
+
 }
 
-html {
-  box-sizing: border-box;
-}
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  height: 100vh;
+html, body {
   margin: 0;
-  padding: 10px;
-
-  background: no-repeat center/auto 100% url("app/bank.png");
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background: var(--background-color) no-repeat center/cover url("./app/bank.png");
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
+  text-align: center;
+  color: goldenrod;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button:hover {
+  background: #2980b9;
 }
